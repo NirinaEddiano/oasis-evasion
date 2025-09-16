@@ -1,0 +1,172 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Aligne le contenu principal et les cartes verticalement */
+    justify-content: center; /* Centre le contenu verticalement */
+    padding: 0 5%;
+    color: var(--color-white);
+  
+    /* Configuration de l'image de fond */
+    background-image: url('/hero-background.jpg'); /* MODIFIEZ CECI */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Effet de parallaxe simple */
+  }
+  
+  /* Superposition de couleur pour la lisibilité */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 71, 122, 0.6); /* Bleu semi-transparent */
+    z-index: 1;
+  }
+  
+  /* Contenu principal (textes et boutons) */
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 70%;
+  }
+  
+  .preTitle {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8); /* Texte blanc légèrement transparent */
+    margin-bottom: 1rem;
+  }
+  
+  .mainTitle {
+    font-size: 3.5rem; /* Taille de police plus grande */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .mainTitle .highlight {
+    color: var(--color-water-blue); /* Couleur d'accentuation */
+    -webkit-text-stroke: 1px #fff; /* Contour blanc pour un effet pop */
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* --- Boutons de la section Hero --- */
+  .actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .button {
+    width: 209px;
+    height: 37px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espace entre l'icône et le texte */
+    padding: 0 10px; /* Padding horizontal */
+    
+    font-size: 13.83px;
+    font-weight: 500; /* Medium */
+  
+    cursor: pointer;
+    border: 2px solid transparent; 
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .quoteButton {
+    background-color: var(--color-water-blue);
+    color: var(--color-white);
+    border-color: var(--color-water-blue);
+  }
+  .quoteButton:hover {
+    background-color: var(--color-marine-blue);
+    border-color: var(--color-marine-blue);
+    transform: translateY(-3px);
+  }
+  
+  .callButton {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+  }
+  .callButton:hover {
+    background-color: var(--color-white);
+    color: var(--color-marine-blue);
+    transform: translateY(-3px);
+  }
+  
+  /* --- Grille des services en bas --- */
+  .servicesGrid {
+    position: absolute;
+    bottom: -9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 1.5rem;
+    z-index: 3;
+    padding-bottom: 2rem;
+  }
+  
+  .serviceCard {
+    background: rgba(255, 255, 255 ); /* Fond transparent */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Carte mise en avant */
+  
+  
+  .highlightedCard:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  .cardIcon {
+   place-self: center;
+    color: var(--color-water-blue);
+  }
+  
+  .cardText h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--color-marine-blue);
+  }
+  
+  .cardText p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    color: var(--color-marine-blue);
+  }
