@@ -54,7 +54,7 @@ const Equipments = () => {
           Équipements : la <span className={styles.highlight}>technologie</span> au service de votre rêve.
         </h2>
         <p className={styles.sectionDescription}>
-          Découvrez une sélection exclusive d'équipements alliant innovation, performance et design pour une expérience piscine incomparable.
+          Découvrez une sélection exclusive d&apos;équipements alliant innovation, performance et design pour une expérience piscine incomparable.
         </p>
       </div>
 
