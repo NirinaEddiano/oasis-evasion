@@ -9,10 +9,10 @@ const HomeConciseCTA = () => {
       <div className={styles.backgroundPattern}></div> {/* Pour un motif/texture subtil */}
       <div className={styles.contentBox}> {/* Boîte de contenu style glassmorphism */}
         <h2 className={styles.title}>
-          Votre rêve de piscine sur mesure ? <span className={styles.highlight}>Commençons dès aujourd'hui.</span>
+          Votre rêve de piscine sur mesure ? <span className={styles.highlight}>Commençons dès aujourd&apos;hui.</span>
         </h2>
         <p className={styles.description}>
-          Chez Oasis Évasion, chaque projet est une œuvre d'art unique, conçue pour refléter votre style et sublimer votre espace.
+          Chez Oasis Évasion, chaque projet est une œuvre d&apos;art unique, conçue pour refléter votre style et sublimer votre espace.
         </p>
         <Link href="/contact" className={styles.ctaButton}>
           <span>Demander une consultation</span>
