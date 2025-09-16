@@ -57,14 +57,14 @@ const MaintenanceCTASection = () => {
       <div className={`${styles.contentWrapper} ${isInView ? styles.animatedIn : ''}`}>
         <div className={styles.leftContent}>
           <h2 className={styles.title}>
-            L'éclat de votre piscine, une <span className={styles.highlight}>priorité</span> toute l'année.
+            L&apos;éclat de votre piscine, une <span className={styles.highlight}>priorité</span> toute l&apos;année.
           </h2>
           <p className={styles.description}>
-            Garantissez une eau saine et cristalline, prolongez la vie de vos équipements et profitez d'une tranquillité d'esprit totale. Découvrez nos solutions d'entretien sur mesure, adaptées à vos besoins.
+            Garantissez une eau saine et cristalline, prolongez la vie de vos équipements et profitez d&apos;une tranquillité d&apos;esprit totale. Découvrez nos solutions d&apos;entretien sur mesure, adaptées à vos besoins.
           </p>
           <Link href="/services#entretien" className={styles.ctaButton}>
             <FaInfoCircle size={16} /> {/* Icône correcte */}
-            <span>Découvrir nos formules d'entretien</span>
+            <span>Découvrir nos formules d&apos;entretien</span>
           </Link>
         </div>
         <div className={styles.rightFeatures}>
