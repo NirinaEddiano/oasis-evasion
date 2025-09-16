@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from './AboutMainContentSection.module.css';
-import { FaCompass, FaHammer, FaHandshake, FaLightbulb, FaTools, FaGlobe } from 'react-icons/fa'; // Icônes pour les trois cartes
+// Supprimé FaTools et FaGlobe car non utilisés
+import { FaCompass, FaHammer, FaHandshake, FaLightbulb } from 'react-icons/fa'; // Icônes pour les trois cartes
 
 const AboutMainContentSection = () => {
   return (
@@ -11,15 +11,15 @@ const AboutMainContentSection = () => {
         <div className={styles.topContent}>
           <div className={styles.leftTitleContainer}>
             <h2 className={styles.longTitle}>
-              Notre Philosophie : L'Art de l'Eau au Service de votre <span className={styles.highlight}>Exception</span>
+              Notre Philosophie : L&apos;Art de l&apos;Eau au Service de votre <span className={styles.highlight}>Exception</span> {/* Corrigé ici */}
             </h2>
           </div>
           <div className={styles.rightTextContainer}>
             <p className={styles.textParagraph}>
-              Chez Oasis Évasion, nous concevons des bassins d’exception qui ne ressemblent à aucune autre piscine. Architecte designer en France depuis de nombreuses années, je mets aujourd’hui mon savoir-faire au service du Maroc, où je réside désormais, pour créer des espaces aquatiques uniques et raffinés. Chaque projet est pensé comme une œuvre sur mesure, alliant esthétisme, confort et innovation.
+              Chez Oasis Évasion, nous concevons des bassins d&apos;exception qui ne ressemblent à aucune autre piscine. Architecte designer en France depuis de nombreuses années, je mets aujourd&apos;hui mon savoir-faire au service du Maroc, où je réside désormais, pour créer des espaces aquatiques uniques et raffinés. Chaque projet est pensé comme une œuvre sur mesure, alliant esthétisme, confort et innovation.
             </p>
             <p className={styles.textParagraph}>
-              Après une carrière d’architecte designer en France, où j’ai conçu et supervisé de nombreux projets sur mesure, j’ai choisi de mettre mon expérience au service du Maroc. Installé à Essaouira, je souhaite offrir une approche différente de la piscine : des créations uniques qui associent architecture, design et plaisir de l’eau. Notre mission est de créer des bassins d’exception qui deviennent de véritables œuvres architecturales et qui transforment un extérieur en un lieu de vie incomparable.
+              Après une carrière d&apos;architecte designer en France, où j&apos;ai conçu et supervisé de nombreux projets sur mesure, j&apos;ai choisi de mettre mon expérience au service du Maroc. Installé à Essaouira, je souhaite offrir une approche différente de la piscine : des créations uniques qui associent architecture, design et plaisir de l&apos;eau. Notre mission est de créer des bassins d&apos;exception qui deviennent de véritables œuvres architecturales et qui transforment un extérieur en un lieu de vie incomparable.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const AboutMainContentSection = () => {
             <FaHandshake className={styles.cardIcon} />
             <div className={styles.cardText}>
               <h3 className={styles.cardTitle}>Accompagnement Personnalisé</h3>
-              <p className={styles.cardDescription}>Nous sommes à vos côtés à chaque étape, offrant conseils d'experts et écoute attentive pour concrétiser votre vision.</p>
+              <p className={styles.cardDescription}>Nous sommes à vos côtés à chaque étape, offrant conseils d&apos;experts et écoute attentive pour concrétiser votre vision.</p>
             </div>
           </div>
         </div>
@@ -61,10 +61,12 @@ const AboutMainContentSection = () => {
             />
           </div>
           <div className={styles.videoContainer}>
-            <Image
-              src="/images/pool-process.jpg" // Image de l'équipe ou d'un chantier
-              alt="Équipe Oasis Évasion en action"
-              fill
+            <video
+              src="/videos/pool-process.mp4" // Exemple de vidéo de processus de construction
+              loop
+              muted
+              autoPlay
+              playsInline
               className={styles.overlayVideo}
             />
             {/* Le texte est maintenant directement dans le conteneur de la vidéo pour être mieux géré */}
