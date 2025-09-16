@@ -61,12 +61,11 @@ const AboutMainContentSection = () => {
             />
           </div>
           <div className={styles.videoContainer}>
-            <video
-              src="/videos/pool-process.mp4" // Exemple de vidéo de processus de construction
-              loop
-              muted
-              autoPlay
-              playsInline
+            <Image
+              src="/images/pool-process.jpg" // Image de l'équipe ou d'un chantier
+              alt="Équipe Oasis Évasion en action"
+              fill
+
               className={styles.overlayVideo}
             />
             {/* Le texte est maintenant directement dans le conteneur de la vidéo pour être mieux géré */}
