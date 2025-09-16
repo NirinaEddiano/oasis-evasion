@@ -3,7 +3,7 @@ import styles from './About.module.css';
 import { FaInfoCircle , FaLightbulb, FaTrophy  } from 'react-icons/fa'; // Icônes pour les boutons
 
 const About = () => {
-  const descriptionText = `Chez Oasis Évasion, nous concevons des bassins d’exception qui ne ressemblent à aucune autre piscine. Fort de nombreuses années d'expérience en tant qu'architecte designer en France, je mets aujourd’hui mon savoir-faire au service du Maroc pour créer des espaces aquatiques uniques et raffinés. Chaque projet est une œuvre sur mesure, alliant esthétisme, confort et innovation.`;
+  const descriptionText = `Chez Oasis Évasion, nous concevons des bassins d’exception qui ne ressemblent à aucune autre piscine. Fort de nombreuses années d&apos;expérience en tant qu&apos;architecte designer en France, je mets aujourd’hui mon savoir-faire au service du Maroc pour créer des espaces aquatiques uniques et raffinés. Chaque projet est une œuvre sur mesure, alliant esthétisme, confort et innovation.`;
 
   return (
     <section className={styles.aboutSection}>
@@ -12,7 +12,7 @@ const About = () => {
         <div className={styles.aboutImage}>
           <img src="/images/pool-design-sketch.jpg" alt="Conception de piscine sur mesure" />
           <div className={styles.infoBox}>
-            <FaLightbulb size={20} /> 
+            <FaLightbulb size={20} />
             <span>Innovation & Esthétisme</span>
           </div>
         </div>
