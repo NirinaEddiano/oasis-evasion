@@ -58,7 +58,7 @@ const Realisations = () => {
           Nos <span className={styles.highlight}>Réalisations</span> d'exception.
         </h2>
         <p className={styles.sectionDescription}>
-          Découvrez une galerie de nos projets les plus emblématiques, où chaque piscine raconte une histoire de design et d'innovation.
+          Découvrez une galerie de nos projets les plus emblématiques, où chaque piscine raconte une histoire de design et d&apos;innovation.
         </p>
       </div>
 
