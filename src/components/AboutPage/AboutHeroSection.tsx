@@ -5,7 +5,7 @@ const AboutHeroSection = () => {
   return (
     <section className={styles.heroAboutSection}>
       <div className={styles.overlay}>
-        <h1 className={styles.title}>À propos d'Oasis Évasion</h1>
+        <h1 className={styles.title}>À propos d&apos;Oasis Évasion</h1> {/* Corrigé ici */}
         <p className={styles.description}>
           Votre partenaire pour la conception et la réalisation de piscines architecturales uniques au Maroc.
         </p>
