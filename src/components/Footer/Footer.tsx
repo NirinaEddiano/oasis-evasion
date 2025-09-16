@@ -17,7 +17,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className={styles.descriptionText}>
-            Architecte designer au Maroc, nous créons des bassins d'exception : des piscines uniques, innovantes et sur mesure.
+            Architecte designer au Maroc, nous créons des bassins d&apos;exception : des piscines uniques, innovantes et sur mesure.
           </p>
           <div className={styles.socialIcons}>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
