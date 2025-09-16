@@ -11,7 +11,7 @@ const AboutCTASection = () => {
           Prêt à créer votre propre <span className={styles.highlight}>Oasis sur Mesure</span> ?
         </h2>
         <p className={styles.description}>
-          Discutons de votre projet unique. Notre expertise en architecture et design transformera votre vision en une réalité aquatique d'exception.
+          Discutons de votre projet unique. Notre expertise en architecture et design transformera votre vision en une réalité aquatique d&apos;exception.
         </p>
         <Link href="/contact" className={styles.ctaButton}>
           <FaPaperPlane size={18} />
