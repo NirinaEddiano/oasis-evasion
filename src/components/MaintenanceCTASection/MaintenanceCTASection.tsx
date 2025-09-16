@@ -6,32 +6,34 @@ import { FaWrench, FaCalendarAlt, FaStar, FaInfoCircle } from 'react-icons/fa';
 import styles from './MaintenanceCTASection.module.css';
 
 const MaintenanceCTASection = () => {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null); // Type ajouté pour useRef
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
+    const currentRef = sectionRef.current; // Capturer la valeur du ref ici
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && entries[0].intersectionRatio >= 0.2) {
           setIsInView(true);
-          observer.disconnect(); // Déconnecter l'observer une fois que la section est apparue
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.2, // Déclencher quand 20% de l'élément est visible
+        threshold: 0.2,
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) { // Utiliser la variable capturée
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) { // Utiliser la variable capturée dans le cleanup
+        observer.unobserve(currentRef);
       };
     };
-  }, []);
+  }, []); // Dépendances vides pour s'exécuter une seule fois au montage
 
   // Définir les éléments une seule fois pour faciliter la duplication et la gestion
   const featureItemsData = [
@@ -43,7 +45,7 @@ const MaintenanceCTASection = () => {
     {
       icon: FaStar,
       title: 'Eau Impeccable',
-      description: 'Profitez d\'une eau saine, claire et équilibrée en permanence.',
+      description: 'Profitez d&apos;une eau saine, claire et équilibrée en permanence.',
     },
     {
       icon: FaCalendarAlt,
@@ -63,7 +65,7 @@ const MaintenanceCTASection = () => {
             Garantissez une eau saine et cristalline, prolongez la vie de vos équipements et profitez d&apos;une tranquillité d&apos;esprit totale. Découvrez nos solutions d&apos;entretien sur mesure, adaptées à vos besoins.
           </p>
           <Link href="/services#entretien" className={styles.ctaButton}>
-            <FaInfoCircle size={16} /> {/* Icône correcte */}
+            <FaInfoCircle size={16} />
             <span>Découvrir nos formules d&apos;entretien</span>
           </Link>
         </div>
@@ -80,7 +82,7 @@ const MaintenanceCTASection = () => {
               </div>
             ))}
             {/* Rendu des éléments dupliqués pour la boucle fluide */}
-            {featureItemsData.slice(0, 2).map((item, index) => ( // Duplique les 2 premiers items pour un défilement continu
+            {featureItemsData.slice(0, 2).map((item, index) => (
               <div key={`clone-${index}`} className={styles.featureItem}>
                 <item.icon className={styles.featureIcon} />
                 <div className={styles.featureTextContent}>
@@ -97,4 +99,3 @@ const MaintenanceCTASection = () => {
 };
 
 export default MaintenanceCTASection;
-
