@@ -7,15 +7,11 @@ import { FaEye, FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Ajout de F
 
 // Import des modules Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-// REMPLACEZ CETTE LIGNE
-// import { Navigation, Autoplay, Loop } from 'swiper/modules';
-// PAR CELLE-CI :
-import { Navigation, Autoplay } from 'swiper/modules'; // Supprimez 'Loop' car ce n'est pas un module exporté explicitement
+import { Navigation, Autoplay } from 'swiper/modules';
 
 // Import des styles Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
-// Optionnel si vous voulez la pagination: import 'swiper/css/pagination';
 
 const realisationsData = [
   {
@@ -29,6 +25,7 @@ const realisationsData = [
     subtitle: 'Intégration paysagère à Essaouira',
   },
   {
+
     imageSrc: '/realisations/piscine-zen-03.jpg',
     title: 'Bassin Naturel & Aménagement Zen',
     subtitle: 'Retraite aquatique à Agadir',
@@ -41,7 +38,7 @@ const realisationsData = [
   {
     imageSrc: '/realisations/piscine-urbaine-05.jpg',
     title: 'Piscine Urbaine & Pool House',
-    subtitle: 'Optimisation d\'espace à Casablanca',
+    subtitle: 'Optimisation d&apos;espace à Casablanca', // Corrigé ici
   },
   {
     imageSrc: '/realisations/piscine-interieur-06.jpg',
@@ -55,26 +52,23 @@ const Realisations = () => {
     <section id="realisations" className={styles.realisationsSection}>
       <div className={styles.realisationsTitleContainer}>
         <h2 className={styles.sectionTitle}>
-          Nos <span className={styles.highlight}>Réalisations</span> d'exception.
+          Nos <span className={styles.highlight}>Réalisations</span> d&apos;exception. {/* Corrigé ici */}
         </h2>
         <p className={styles.sectionDescription}>
-          Découvrez une galerie de nos projets les plus emblématiques, où chaque piscine raconte une histoire de design et d&apos;innovation.
+          Découvrez une galerie de nos projets les plus emblématiques, où chaque piscine raconte une histoire de design et d&apos;innovation. {/* Corrigé ici */}
         </p>
       </div>
 
-      <div className={styles.carouselContainer}> {/* Nouveau conteneur pour le carrousel et les flèches */}
+      <div className={styles.carouselContainer}>
         <Swiper
-          // REMPLACEZ CETTE LIGNE
-          // modules={[Navigation, Autoplay, Loop]}
-          // PAR CELLE-CI :
-          modules={[Navigation, Autoplay]} // Supprimez 'Loop' du tableau des modules
-          spaceBetween={60} // Espacement entre les slides
-          slidesPerView={1} // Par défaut pour mobile
-          loop={true} // La propriété 'loop' gère la boucle directement sur le composant Swiper
-          centeredSlides={true} // Centre la slide active
+          modules={[Navigation, Autoplay]}
+          spaceBetween={60}
+          slidesPerView={1}
+          loop={true}
+          centeredSlides={true}
           autoplay={{
-            delay: 4000, // Défilement automatique toutes les 4 secondes
-            disableOnInteraction: false, // Ne pas arrêter l'autoplay lors de l'interaction
+            delay: 4000,
+            disableOnInteraction: false,
           }}
           navigation={{
             nextEl: '.swiper-button-next-custom',
@@ -86,7 +80,7 @@ const Realisations = () => {
               spaceBetween: 30,
             },
             1200: {
-              slidesPerView: 3, // 3 slides visibles pour desktop
+              slidesPerView: 3,
               spaceBetween: 40,
             },
           }}
