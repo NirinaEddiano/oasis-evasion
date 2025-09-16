@@ -2,7 +2,8 @@
 
 import React from 'react';
 import styles from './Testimonials.module.css';
-import { FaStar, FaArrowRight } from 'react-icons/fa';
+// Supprimé FaArrowRight car non utilisé
+import { FaStar } from 'react-icons/fa';
 
 // Fonction utilitaire pour obtenir les initiales
 const getInitials = (name: string) => {
@@ -21,27 +22,27 @@ const testimonialsData = [
     stars: 5,
   },
   {
-    text: "Une approche d’architecte qui change tout : précision, créativité et élégance. Le résultat a dépassé toutes nos attentes.",
+    text: "Une approche d&apos;architecte qui change tout : précision, créativité et élégance. Le résultat a dépassé toutes nos attentes.", // Corrigé ici
     author: "Karim A.",
     role: "Investisseur à Casablanca",
     stars: 5,
   },
   {
-    text: "Aujourd’hui, nous avons une piscine qui ne ressemble à aucune autre. Merci à Oasis Évasion pour leur écoute et leur professionnalisme !",
+    text: "Aujourd&apos;hui, nous avons une piscine qui ne ressemble à aucune autre. Merci à Oasis Évasion pour leur écoute et leur professionnalisme !", // Corrigé ici
     author: "Sophie M.",
     role: "Client satisfait à Rabat",
     stars: 5,
   },
   {
-    text: "L'équipe d'Oasis Évasion a transformé notre jardin en une véritable oasis de fraîcheur. Un travail impeccable et un suivi irréprochable.",
+    text: "L&apos;équipe d&apos;Oasis Évasion a transformé notre jardin en une véritable oasis de fraîcheur. Un travail impeccable et un suivi irréprochable.", // Corrigé ici
     author: "Ahmed L.",
     role: "Résident à Fès",
     stars: 5,
   },
   {
-    text: "De la conception à la réalisation, tout a été géré avec maîtrise et un sens du détail incroyable. Notre piscine est une œuvre d'art.",
+    text: "De la conception à la réalisation, tout a été géré avec maîtrise et un sens du détail incroyable. Notre piscine est une œuvre d&apos;art.", // Corrigé ici
     author: "Nadia D.",
-    role: "Architecte d'intérieur, Agadir",
+    role: "Architecte d&apos;intérieur, Agadir", // Corrigé ici
     stars: 5,
   },
   {
@@ -60,13 +61,13 @@ const testimonialsData = [
   // Ajoutez-en plus si vous voulez plus de variété avant la duplication
   ...[
     {
-      text: "La qualité des matériaux et la précision de l'exécution sont remarquables. Oasis Évasion est la référence au Maroc.",
+      text: "La qualité des matériaux et la précision de l&apos;exécution sont remarquables. Oasis Évasion est la référence au Maroc.", // Corrigé ici
       author: "Sarah R.",
       role: "Experte en design",
       stars: 5,
     },
     {
-      text: "Un projet de piscine qui a été un véritable plaisir du début à la fin. L'équipe est passionnée et cela se voit dans le résultat.",
+      text: "Un projet de piscine qui a été un véritable plaisir du début à la fin. L&apos;équipe est passionnée et cela se voit dans le résultat.", // Corrigé ici
       author: "Omar G.",
       role: "Client heureux",
       stars: 5,
@@ -91,7 +92,7 @@ const Testimonials = () => {
         </p>
       </div>
 
-      <div className={styles.testimonialsWrapper}> {/* Conteneur pour la rangée unique et les overlays de transparence */}
+      <div className={styles.testimonialsWrapper}>
         <div className={styles.testimonialsRow}>
           {duplicatedTestimonials.map((testimonial, index) => (
             <div key={`testimonial-${index}`} className={styles.testimonialCard}>
